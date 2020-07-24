@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <a href='https://www.cod3r.com.br'>Cod3r</a>
+    </div>
+    <div id='primeiro'>
+        <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
+    </div>
+    <script>
+        // Atribuindo a tag img numa constante
+        const img = document.querySelector('img')
+
+        // Imprimindo o valor do src com a função getAttribute()
+        console.log('getAttribute', img.getAttribute('src'))
+        // Imprimindo o valor do src apenas com a notação .src na constante
+        console.log('src', img.src)
+        // Imprimindo o valor de src com []
+        console.log('["src"]', img['src'])
+        // Imprimindo o valor de alt com a notação .alt
+        console.log('alt', img.alt)
+
+        console.log('Elemento "img"..............')
+        // Imprimindo o nodeType da constante
+        console.log('NodeType', img.nodeType)
+        // Imprimindo a tag da constante
+        console.log('NodeName', img.nodeName)
+
+        // Fazendo o rolê de cima com o attr 'src'
+        const src = img.getAttributeNode('src')
+        console.log('Atributo "src"..............')
+        console.log('NodeType', src.nodeType)
+        console.log('NodeName', src.nodeName)
+        console.log('NodeValue', src.nodeValue)
+
+        const link = document.querySelector('a')
+        console.log('Elemento "a".................')
+        console.log('href', link.href)
+        console.log('fistChild.nodeType', link.firstChild.nodeType)
+        link.firstChild.nodeValue = 'Novo Texto'
+    </script>
+</body>
+
+</html>

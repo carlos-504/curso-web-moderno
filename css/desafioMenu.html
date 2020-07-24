@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        .cabecalho{
+            background-color: rgba(0, 0, 0, .8);
+            padding: 10px;
+            border-bottom: solid 3px rgb(75, 129, 180);
+            height: 65px;
+        }
+
+        .logo{
+            width: 50px;
+            height: 0px;
+        }
+
+        .logo img {
+            width: 280px;
+            height: 60px;
+        }
+
+        .menu-toggle{
+            left: 600px;
+            position: relative;
+            margin-top: 12px;
+            width: 55px;
+            height: 45px;
+            display: none;
+            background-color: rgba(139, 124, 124, 0.637);
+            border: none;
+            border-radius: 7px;
+            color: #fff;
+        }
+
+        @media(max-width: 700px){
+            .menu-toggle { display: block; }
+        }
+        
+        .menu ul{
+            margin-top: 14px;
+        }
+
+        .menu li{
+            position: relative;
+            left: 315px;
+            display: inline-block;        
+        }
+
+        @media(max-width: 700px){
+            .menu li { display: none; }
+        }
+
+        .menu a{
+            color: #fff;
+            font-family: Oswald, sans-serif;
+            font-size: 24px;
+            text-decoration: none;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 19px;
+            padding-right: 15px; 
+            
+        }
+
+        .menu a:hover{
+            background-color: rgba(146, 192, 252, 0.856);
+            color: rgba(0, 0, 0, .8);
+        }
+
+        .autenticacao{
+            position: relative;
+            text-align: right;
+            right: 38px;
+            bottom: 32px;
+            word-spacing: 10px;
+        }
+
+        .autenticacao a{
+            color: #fff;
+            font-family: Oswald, sans-serif;
+            text-decoration: none;
+            font-size: 21px;
+        }
+
+        @media(max-width: 1350px){
+            .autenticacao{ display:none; }
+        }
+
+        .botao{
+            border-radius: 25px;
+            padding: 5px 15px;
+        }
+
+        .destaque{
+            background-color: rgb(218, 61, 61);
+        }
+
+        .destaque:hover{
+            background-color: rgb(173, 40, 40);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+        // ...
+    </script>
+</body>
+
+</html>
