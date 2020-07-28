@@ -9,7 +9,42 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        // Selecionando o elemento body
+        const body = document.querySelector('body')
+
+        // Criando um elemento com createElement()
+        const div1 = document.createElement('div')
+        div1.classList.add('destaque')
+        // Adicionando um conteúdo na div
+        div1.innerHTML = 'Primeiro'
+
+        const div2 = document.createElement('div')
+        // Adicionando attr com a função setAttribute()
+        div2.setAttribute('wm-atributo', 'valor')
+        div2.innerHTML = 'Segundo'
+
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        const div3 = document.createElement('div')
+        // Adicionando o elemento p dentro da div3 com appendChild
+        div3.appendChild(p)
+
+        // Adicionado as divs dentro do body
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        // Criando texto com createTextNode()
+        const texto = document.createTextNode('Antes...')
+        // Inserindo o texto antes do primeiro filho da div3
+        div3.insertBefore(texto, div3.ChildNodes[0])
+
+        // Clonando a div3 na div4
+        // Parâmetro boolean, true herda os filhos e false não herda
+        const div4 = div3.cloneNode(true)
+        body.appendChild(div4)
+        // removendo a div3 do body
+        body.removeChild(div3)
     </script>
 </body>
 
