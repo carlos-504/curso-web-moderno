@@ -14,6 +14,7 @@ const antes2 = cb => {
 function copiar(cb) {
     //gulp.src(['pastaA/arquivo1.txt', 'pastaA/arquivo2.txt'])
 
+    // Qualquer arquivo que esetja na pastaA e tenha a extensão .txt 
     gulp.src('pastaA/**/*.txt')
         //.pipe(imagePelaMetade())
         //.pipe(imagemEmPretoEBranco())
