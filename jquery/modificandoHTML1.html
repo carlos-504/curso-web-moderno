@@ -13,8 +13,37 @@
     <div id='conteudo1'></div>
     <div id='conteudo2'></div>
     <div id='conteudo3'></div>
+    <div>Blá</div>
 
     <script>
-        // ...
+        // $('div') -> selecionado atráves do seletor
+        // $('<div>') -> criando um elemeno (tag)
+
+        // Conteúdo 1
+        // Adicionando elemento com append()
+        $('#conteudo1').append('<p>1</p>')
+
+        // Conteúdo 2
+        // Criando uma lista de elementos
+        const elementos = [
+            $('<li></li>').append('Arroz'),
+            $('<li>').append('Feijão'),
+            $('<li>').append('Carne')
+        ]
+
+        // prepend() vai anexar antes dos elementos que estão dentro
+        const lista = $('<ul><li>Sorvete</li></ul>').prepend(elementos)
+        $('#conteudo2').append(lista)
+
+        // Conteudo 3
+        $('#conteudo3').append(['<h1>1</h1>', '<h1>2</h1>'])
+                .prepend('<h1>0</h1>')
+        // A api html() substitui o conteúdo
+        $('#conteudo3').html('<h1>123</h1>')
+        // a api text() adiciona textos dentro do elemento selecionado
+        $('#conteudo3').text('<h1>123</h1>')
+
+        // Alterando todas as divs com o attr id
+        $('div[id]').html('<strong>Todos!</strong>')
     </script>
 </body>
