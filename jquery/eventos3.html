@@ -26,6 +26,41 @@
     <span id='resultado'></span>
 
     <script>
-        // ...
+        function exibirDadosEvento(e) {
+            // Limpando o conteúdo de resultado
+            $('#resultado').empty()
+            const div1 = $('<div>')
+            const div2 = $('<div>')
+            
+            // armazenado as duas divs criadas acima em #resultado  
+            $('#resultado').append(div1, div2)
+            // exibindo na div criada o elemento que teve o curso encima 
+            div1.append(`target: ${e.target.id}`)
+
+            // relatedTarget exibe o elemento anterior que o cursor estava
+            const rt = e.relatedTarget ? e.relatedTarget.tagName : null
+            div1.append(`<br>relatedTarget: ${rt}`)
+
+            // type mostra o tipo de evento que aconteceu    
+            div1.append(`<br>type: ${e.type}`)
+            // which mostra evento de teclado e evento de mouse(selecionado)
+            div1.append(`<br>which: ${e.which}`)
+            // mostra a metaKey do teclado (seja lá qual for)
+            div1.append(`<br>metaKey: ${e.metaKey}`)
+
+            div2.append(`pageX: ${e.pageX}`)
+            div2.append(`<br>pageY: ${e.pageY}`)
+            div2.append(`<br>clientX: ${e.clientX}`)
+            div2.append(`<br>clientY: ${e.clientY}`)
+
+            const obs = e.data ? e.data.obs : null
+            div2.append(`<br>obs: ${obs}`)
+        }
+
+        // Adicionando a api on() e passando a função exibirDadosEvento como parâmetro
+        $('#div1, #div2').on('mouseenter mouseleave', 
+            { obs: 'Funciona!' }, exibirDadosEvento)
+        // Passando a api keyup para acionar a função exibirDadosEvento
+        $('input').keyup(exibirDadosEvento)
     </script>
 </body>
